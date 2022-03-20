@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <img class="header__nav-logo" src="./img/logo.png" alt="Netflix logo" />
+        </nav>
+        <section class="header__form">
+            <h1 class="header__form-title">Films, séries TV et bien plus en illimité.</h1>
+            <h2 class="header__form-subtitle">Prêt à regarder Netflix ? Rechercher dans notre catalogue vos envies du moment et faites vous plaisir en notre compagnie.</h2>
+            <form class="header__form-search">    
+                <label for="search"></label>
+                <input class="header__form-searchbar" type="search" name="search" id="search" placeholder="Entrez un titre..." />
+                <button class="header__form-searchbutton">Rechercher ></button>
+            </form>
+            <article class="header__form-buttons">
+                <button class="header__form-btn" data-filter="all">all</button>
+                <button class="header__form-btn" data-filter="serie">serie</button>
+                <button class="header__form-btn" data-filter="film">film</button>
+                <button class="header__form-btn" data-filter="anime">anime</button>
+            </article>
+        </section>
+    </header>
+    <main class="main">
+        <% for (const card of title) { %>
+            <article class="main__card <%= card.category %>">
+                <span class="main__card-title"><%= card.name %></span>
+                <a href="/<%= card.id %>"><img class="main__card-background" src="<%= card.illustration %>" alt="<%= card.title %>" /></a>
+            </article>
+        <% } %>
+    </main>
+</body>
+</html>
