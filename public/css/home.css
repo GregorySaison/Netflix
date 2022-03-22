@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "NetflixSansBold";
+  src: url("./../fonts/NetflixSansBold.ttf");
+}
+
+@font-face {
+  font-family: "NetflixSansThin";
+  src: url("./../fonts/NetflixSansThin.ttf");
+}
+
+@font-face {
+  font-family: "NetflixSansRegular";
+  src: url("./../fonts/NetflixSansRegular.ttf");
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  font-family: "NetflixSansBold";
+  color: #fff;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 82%;
+  background-image: url("./../img/background.jpg");
+  background-size: cover;
+  border-bottom: 10px solid #222222;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 10%;
+}
+
+.header__nav-logo {
+  max-width: 9%;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.header__form {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.header__form-title {
+  font-size: 4vw;
+}
+
+.header__form-subtitle {
+  font-family: "NetflixSansThin";
+  font-size: 1.25vw;
+}
+
+.header__form-search {
+  display: flex;
+  justify-content: center;
+}
+
+.header__form-searchbar {
+  padding: 25px;
+  width: 500px;
+}
+
+.header__form-searchbar::placeholder {
+  font-family: "NetflixSansThin";
+}
+
+.header__form-searchbutton {
+  width: 200px;
+  font-family: "NetflixSansRegular";
+  font-size: 1.5vw;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+}
+
+.header__form-buttons {
+  margin-top: 20px;
+}
+
+.header__form-btn {
+  width: 100px;
+  color: #e50914;
+  margin-right: 10px;
+  background-color: #fff;
+  border: none;
+  font-family: "NetflixSansBold";
+  text-transform: uppercase;
+}
+
+.header__form-btn:focus {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main__card {
+  width: 20%;
+  height: 10%;
+}
+
+.main__card-title {
+  display: none;
+}
+
+.main__card:hover {
+  transform: scale(1.25);
+  transition: 500ms;
+}
+
+.main__card-background {
+  width: 100%;
+}
